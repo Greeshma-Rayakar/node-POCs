@@ -1,0 +1,9 @@
+<div *ngIf="this.appService.loading">
+  <mat-spinner></mat-spinner>
+</div>
+<mat-card>
+    <mat-card-header>
+      <mat-card-title>{{currentDay.weekDay}}</mat-card-title>
+    </mat-card-header>
+    {{currentDay.dateString}}
+</mat-card>

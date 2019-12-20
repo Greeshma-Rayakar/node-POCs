@@ -1,0 +1,10 @@
+<mat-spinner color="primary" *ngIf="this.appService.loading"></mat-spinner>
+<app-header (dayToDisplay) = displayDay($event)></app-header>
+<main>
+  <div *ngIf="!this.appService.isWeekDay">
+    <app-time></app-time>
+  </div>
+  <div *ngIf="this.appService.isWeekDay">
+      <app-weekday [currentDay] = "selectedDay"></app-weekday>
+  </div>
+</main>

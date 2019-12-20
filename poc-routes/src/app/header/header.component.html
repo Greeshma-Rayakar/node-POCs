@@ -1,0 +1,22 @@
+<mat-toolbar color="primary">
+    <a mat-button routerLink="">
+        <button mat-icon-button aria-label="Example icon-button with a home icon" (click) = update()>
+        <mat-icon style="vertical-align: middle;">home</mat-icon>
+    </button>
+    </a>
+    <span class="example-spacer"></span>
+    <button mat-button [matMenuTriggerFor]="menu">Days of Week 
+        <mat-icon class="example-icon" style="vertical-align: middle;" 
+        aria-hidden="false" aria-label="Example arrow icon">arrow_drop_down</mat-icon>
+    </button>
+    <mat-menu #menu="matMenu">
+        <button mat-menu-item (click) = getMonday()>Monday</button>
+        <button mat-menu-item (click) = getTuesday()>Tuesday</button>
+        <button mat-menu-item (click) = getWednesday()>Wednesday</button>
+        <button mat-menu-item (click) = getThursday()>Thursday</button>
+        <button mat-menu-item (click) = getFriday()>Friday</button>
+        <button mat-menu-item (click) = getSaturday() >Saturday</button>
+        <button mat-menu-item (click) = getSunday()>Sunday</button>
+    </mat-menu>
+
+</mat-toolbar>
